@@ -1,0 +1,30 @@
+﻿@{
+    ViewBag.Title = "Flight Manager";
+}
+
+@model FlightManager.Models.MainModel
+
+<section class="banner" id="top">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6" id="list-flights">
+                @Html.Partial("_ListFlights", Model.StoredFlights)
+            </div>
+            <div class="col-md-6" id="new-flight">
+                @Html.Partial("_NewFlight", Model.NewFlight)
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<div class="overlay" id="EditFlight">
+
+    <div class="popup">
+        <a class="close" onclick="$('#EditFlight').removeClass('overlay_show')">&times;</a>
+        <div class="content">
+            
+        </div>
+    </div>
+
+</div>

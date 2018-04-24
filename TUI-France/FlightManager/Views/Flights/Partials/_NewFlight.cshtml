@@ -1,0 +1,43 @@
+﻿@using FlightManager.App_Ressources;
+
+@model FlightManager.Models.FlightModel
+
+<section id="first-tab-group" class="tabgroup">
+    <div id="tab1">
+        <div class="submit-form">
+            <h4>@Html.Raw(FlightRessource.CreateNewFlightTitle)</h4>
+            @using (Html.BeginForm("", "", FormMethod.Post, new { @id = "form-submit" }))
+            {
+                <div class="row">
+                    <div class="col-md-6">
+                        <fieldset>
+                            @Html.Label(FlightRessource.CreateNewFlightFrom)
+                            @Html.DropDownListFor(m => m.DepartureAirportCode, new SelectList(Model.Airports, "Value", "Text"), "Select a location...")
+                        </fieldset>
+                    </div>
+                    <div class="col-md-6">
+                        <fieldset>
+                            @Html.Label(FlightRessource.CreateNewFlightTo)
+                            @Html.DropDownListFor(m => m.DestinationAirportCode, new SelectList(Model.Airports, "Value", "Text"), "Select a location...")
+                        </fieldset>
+                    </div>
+                    <div class="col-md-6">
+                        <fieldset>
+                            @Html.Label(FlightRessource.DepartureDate)
+                            @Html.TextBoxFor(x => x.DepartureDateUtc, new { @class = "form-control date", @id = "deparure", @placeholder = FlightRessource.SelectDate })
+                        </fieldset>
+                    </div>
+
+                    <div class="col-md-6">
+                        <fieldset>                          
+                            <button type="button" id="form-submit-btn" class="btn">@FlightRessource.CreateNewFlightBTN</button>
+                        </fieldset>
+                    </div>
+                    <div class="col-md-6 div-error">
+                        <label class="has-error error"></label>
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+</section>

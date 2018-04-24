@@ -1,0 +1,38 @@
+﻿@model IEnumerable<FlightModel>
+
+<div class="left-side">
+    <div class="logo">
+        <h4>
+            <img src="@Url.Content("~/Content/img/logo.png")" alt="Flight">
+            List of flights
+        </h4>
+    </div>
+    <div class="tabs-content row">
+
+        <div class="col-md-11" id="list-flights-table">
+            <table id="mytable" class="table table-hover table-fixed">
+                <thead>
+                    <th class="col-xs-4">@FlightRessource.TableDepartureDate</th>
+                    <th class="col-xs-4">@FlightRessource.TableDepartureAirport</th>
+                    <th class="col-xs-3">@FlightRessource.TableDestinationAirport</th>
+                    <th class="col-xs-1"></th>
+                </thead>
+                <tbody>
+
+                    @foreach (var flight in Model)
+                    {
+                        <tr>
+                            <td class="col-xs-4">@flight.DepartureDateUtc </td>
+                            <td class="col-xs-4">@flight.DepartureAirportName</td>
+                            <td class="col-xs-3">@flight.DestinationAirportName</td>
+                            <td class="col-xs-1"><p data-placement="top" title="@FlightRessource.TableFlightEdit"><button class="btn btn-primary btn-xs flight-edit-btn" data-title="@FlightRessource.TableFlightEdit" data-id="@flight.Id"><span class="glyphicon glyphicon-pencil"></span></button></p></td>
+                        </tr>
+                    }
+
+                </tbody>
+
+            </table>
+        </div>
+        
+    </div>
+</div>

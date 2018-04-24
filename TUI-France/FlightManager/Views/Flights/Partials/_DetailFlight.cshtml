@@ -1,0 +1,42 @@
+﻿@model FlightModel
+
+<div class="row">
+    <div class="col-md-6">
+        <fieldset>
+            @Html.Label(FlightRessource.CreateNewFlightFrom)
+            @Html.TextBox("DepartureAirportName", Model.DepartureAirportName, new { @class = "form-control", @readonly = "true" })
+        </fieldset>
+    </div>
+    <div class="col-md-6">
+        <fieldset>
+            @Html.Label(FlightRessource.CreateNewFlightTo)
+            @Html.TextBox("DepartureAirportName", Model.DestinationAirportName, new { @class = "form-control", @readonly = "true" })
+        </fieldset>
+    </div>
+    <div class="col-md-6">
+        <fieldset>
+            @Html.Label(FlightRessource.DepartureDate)
+            @Html.TextBox("DepartureDateUtc", Model.DepartureDateUtc, new { @class = "form-control", @readonly = "true" })
+        </fieldset>
+    </div>
+
+    <div class="col-md-6">
+        <fieldset>
+            @Html.Label($"{FlightRessource.Distance} ({ FlightRessource.DistanceM})")
+            @Html.TextBox("Distance", (Model.Distance / 1000).ToString("0.00"), new { @class = "form-control", @readonly = "true" })
+        </fieldset>
+    </div>
+
+    <div class="col-md-6">
+        <fieldset>
+            @Html.Label($"{FlightRessource.FuelAmount} ({ FlightRessource.FuelAmountLiters})")
+            @Html.TextBox("FuelAmount", Model.FuelAmount.ToString("0.00"), new { @class = "form-control", @readonly = "true" })
+        </fieldset>
+    </div>
+
+    <div class="col-md-6">
+        <fieldset>
+            <button type="button" id="resume-detail-btn" onclick="location.reload();" class="btn">@FlightRessource.Ok</button>
+        </fieldset>
+    </div>
+</div>
