@@ -19,6 +19,13 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FlightManager.Model", "Flig
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FlightManager.ThirdPartyService", "FlightManager.ThirdParty\FlightManager.ThirdPartyService.csproj", "{35FD8470-527B-418F-AEFF-CABC8FACA458}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Exercice3.Projects", "Exercice3.Projects", "{409AB775-C19D-4572-8176-9047A3C59C3E}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Exercice2.Answers", "Exercice2.Answers", "{4417D9AA-75B2-4F2F-9872-A586E1ABC463}"
+	ProjectSection(SolutionItems) = preProject
+		Exercise2.Anwser.txt = Exercise2.Anwser.txt
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -65,5 +72,8 @@ Global
 		{DCFC2331-CAEF-483F-AEC2-F36B5A20AE42} = {1B573D41-AC38-4C9F-A03B-24A068550976}
 		{40D1809C-6E9D-4DC0-B304-2BB429A02203} = {1B573D41-AC38-4C9F-A03B-24A068550976}
 		{35FD8470-527B-418F-AEFF-CABC8FACA458} = {1B573D41-AC38-4C9F-A03B-24A068550976}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {E2563CF5-0037-4725-B9C0-09D232CB4200}
 	EndGlobalSection
 EndGlobal

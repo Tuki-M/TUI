@@ -1,0 +1,25 @@
+2.How would you rate the quality of the piece of code ?
+
+> This piece of code is not optimized at all
+> The checks using 'is' operator are useless regarding the fact that after the check we use 'as' operator to cast and in my opinion
+  the 'as' internally uses the 'is' operator and if false it returns <null>, 'is' operator is quick but why add unnecessary step ? 
+
+We can simply write something like this : 
+
+  var messageA = message as MessageA;
+  var messageB = message as MessageB;
+  var messageC = message as MessageC;
+
+  if(messageA != null){
+	messageA.MyCustomMthodOnA();
+  }
+  else if(messageB != null){
+	messageB.MyCustomMthodOnB();
+	messageB.SomeAdditionalMthodOnB();
+  }
+  else if(messageC != null){
+	messageC.MyCustomMthodOnC();
+  }
+  else{
+	//We have always to handle the 'else', even just to make a trace in logs 
+  }
