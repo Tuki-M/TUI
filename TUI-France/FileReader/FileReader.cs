@@ -51,5 +51,15 @@ namespace FileReader
                     return !isEncrypted ? ReadFile(path) : ReadEncryptedFile(path);
             }
         }
+
+        /// <summary>
+        /// Read json file from the path
+        /// </summary>
+        /// <param name="path">full path to json file to read</param>
+        /// <returns>string file content</returns>
+        public string ReadJsonFile(string path)
+        {
+            return ReadFile(path);
+        }
     }
 }
