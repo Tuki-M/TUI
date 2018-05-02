@@ -26,6 +26,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Exercice2.Answers", "Exerci
 		Exercise2.Anwser.txt = Exercise2.Anwser.txt
 	EndProjectSection
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FileReader", "FileReader\FileReader.csproj", "{2C5E8C11-BCE5-4F42-87FC-5065F58906A5}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -60,6 +62,10 @@ Global
 		{35FD8470-527B-418F-AEFF-CABC8FACA458}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{35FD8470-527B-418F-AEFF-CABC8FACA458}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{35FD8470-527B-418F-AEFF-CABC8FACA458}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2C5E8C11-BCE5-4F42-87FC-5065F58906A5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2C5E8C11-BCE5-4F42-87FC-5065F58906A5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2C5E8C11-BCE5-4F42-87FC-5065F58906A5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2C5E8C11-BCE5-4F42-87FC-5065F58906A5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -72,6 +78,7 @@ Global
 		{DCFC2331-CAEF-483F-AEC2-F36B5A20AE42} = {1B573D41-AC38-4C9F-A03B-24A068550976}
 		{40D1809C-6E9D-4DC0-B304-2BB429A02203} = {1B573D41-AC38-4C9F-A03B-24A068550976}
 		{35FD8470-527B-418F-AEFF-CABC8FACA458} = {1B573D41-AC38-4C9F-A03B-24A068550976}
+		{2C5E8C11-BCE5-4F42-87FC-5065F58906A5} = {409AB775-C19D-4572-8176-9047A3C59C3E}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {E2563CF5-0037-4725-B9C0-09D232CB4200}
