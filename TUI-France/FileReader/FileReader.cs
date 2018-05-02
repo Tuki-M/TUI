@@ -27,17 +27,20 @@ namespace FileReader
         /// </summary>
         /// <param name="path">full path to XML file to read</param>
         /// <param name="role">role based security context, by default it's None</param>
+        /// <param name="isEncrypted">true if file is encrypted, by default it's not</param>
         /// <returns>the content of the file to read</returns>
-        public string ReadXmlFile(string path, Role role = Role.None)
+        public string ReadXmlFile(string path, Role role = Role.None, bool isEncrypted = false)
         {
             switch (role)
             {
                 case Role.None:
-                    return ReadFile(path);
-                case Role.Admin:
-                    return ReadFile(path);//Not specified clearly by the business for now
+                    return !isEncrypted ? ReadFile(path) : ReadEncryptedFile(path);
+
+                case Role.Admin: //Not specified clearly by the business for now
+                    return !isEncrypted ? ReadFile(path) : ReadEncryptedFile(path);
+
                 default:
-                    return ReadFile(path);
+                    return !isEncrypted ? ReadFile(path) : ReadEncryptedFile(path);
             }
         }
     }
