@@ -16,5 +16,23 @@ namespace FileReader
 
             return File.ReadAllText(path);
         }
+
+        public string ReadEncryptedFile(string path)
+        {
+            string fileContent = ReadFile(path);
+            return Reverse(fileContent);
+        }
+
+        /// <summary>
+        /// Reverse string
+        /// </summary>
+        /// <param name="content">the string content</param>
+        /// <returns>Reversed string</returns>
+        private string Reverse(string content)
+        {
+            char[] contentArray = content.ToCharArray();
+            Array.Reverse(contentArray);
+            return new string(contentArray);
+        }
     }
 }
