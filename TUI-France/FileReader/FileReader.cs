@@ -75,5 +75,27 @@ namespace FileReader
             else
                 return ReadEncryptedFile(path);
         }
+
+        /// <summary>
+        /// Read json file from the path
+        /// </summary>
+        /// <param name="path">full path to json file to read</param>
+        /// <param name="role">role based security context</param>
+        /// <param name="isEncrypted">if the file is encrypted or not, by default it's not</param>
+        /// <returns>string file content</returns>
+        public string ReadJsonFile(string path, Role role, bool isEncrypted = false)
+        {
+            switch (role)
+            {
+                case Role.None:
+                    return ReadJsonFile(path, isEncrypted);
+
+                case Role.Admin: //Not specified clearly by the business for now
+                    return ReadJsonFile(path, isEncrypted);
+
+                default:
+                    return ReadJsonFile(path, isEncrypted);
+            }
+        }
     }
 }
