@@ -14,3 +14,6 @@ You will see that in the tag 1 to 6 i used the approach of having a method name 
 but in the tag 7 to 9 i used another approach by creating a new method for each new user story from the business team
 
 I think that we can use the first approach if it's not a big evolution otherwise i prefer the second approach because we will have less risk of regressions issues
+
+## Bonus > CLI
+WPf app using the File Reader library [here](https://github.com/Tuki-M/TUI/blob/master/TUI-France/FileReaderCLI) 
